@@ -1,168 +1,309 @@
-import Link from 'next/link'
-import Certificates from '../components/Certificates'
+// import Link from 'next/link'
+// import Certificates from '../components/Certificates'
+
+// export default function Home() {
+//   const skills = [
+//     'Python',
+//     'PyTorch',
+//     'Computer Vision',
+//     'NLP',
+//     'Streamlit',
+//     'Scikit-learn',
+//     'Data Visualization',
+//     'Machine Learning',
+//     'Deep Learning',
+//   ]
+
+//   return (
+//     <section className="space-y-10">
+//       {/* 🧠 Header */}
+//       <header className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-10 rounded-3xl shadow-lg transform transition duration-500 hover:scale-[1.01]">
+//         <h1 className="text-4xl font-bold tracking-tight">Mohamed Tarek</h1>
+//         <p className="text-lg text-indigo-100 mt-3 max-w-2xl">
+//           AI Student · Machine Learning & Deep Learning Enthusiast · Cairo, Egypt
+//         </p>
+//         <div className="mt-6 flex gap-4 flex-wrap">
+//           <a
+//             className="px-6 py-2 bg-white text-indigo-700 font-semibold rounded-lg shadow hover:bg-indigo-50 transition"
+//             href="/projects"
+//           >
+//             🚀 View Projects
+//           </a>
+
+//           {/* 📄 CV Buttons */}
+//           <div className="flex gap-3 flex-wrap">
+//             <a
+//               className="px-6 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition"
+//               href="/files/Mohamed_Tarek_AI_Updated.docx"
+//               target="_blank"
+//               rel="noreferrer"
+//             >
+//               🔍 View CV
+//             </a>
+
+//             <a
+//               href="/files/Mohamed_Tarek_AI_Updated.docx"
+//               download
+//               className="px-6 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition"
+//             >
+//               📄 Download CV
+//             </a>
+//           </div>
+//         </div>
+//       </header>
+
+//       {/* 👤 About Section */}
+//       <section className="grid md:grid-cols-2 gap-8">
+//         <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+//           <h2 className="text-2xl font-semibold text-indigo-700">About Me</h2>
+//           <p className="mt-4 text-slate-700 leading-relaxed">
+//             I’m a passionate AI student at Arab Open University, currently in my
+//             2nd year. I enjoy building intelligent systems using Machine Learning
+//             and Deep Learning — transforming data into real-world insights.
+//           </p>
+//           <ul className="mt-4 space-y-2 text-sm text-slate-600">
+//             <li>
+//               <strong>Email:</strong>{' '}
+//               <a
+//                 href="mailto:mohamedwork280@gmail.com"
+//                 className="text-indigo-600 hover:underline"
+//               >
+//                 mohamedwork280@gmail.com
+//               </a>
+//             </li>
+//             <li>
+//               <strong>Location:</strong> Cairo, Egypt
+//             </li>
+//             <li>
+//               <strong>GitHub:</strong>{' '}
+//               <a
+//                 href="https://github.com/MohamedWo"
+//                 target="_blank"
+//                 rel="noreferrer"
+//                 className="text-indigo-600 hover:underline"
+//               >
+//                 github.com/MohamedWo
+//               </a>
+//             </li>
+//             <li>
+//               <strong>LinkedIn:</strong>{' '}
+//               <a
+//                 href="https://www.linkedin.com/in/mohamed-mohamed-230ba4364/"
+//                 target="_blank"
+//                 rel="noreferrer"
+//                 className="text-indigo-600 hover:underline"
+//               >
+//                 linkedin.com/in/mohamed-mohamed-230ba4364
+//               </a>
+//             </li>
+//           </ul>
+//         </div>
+
+//         {/* 🧠 Skills */}
+//         <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+//           <h2 className="text-2xl font-semibold text-indigo-700">Skills</h2>
+//           <p className="mt-3 text-slate-700">
+//             Technologies and tools I use most often:
+//           </p>
+//           <div className="mt-5 flex flex-wrap gap-3">
+//             {skills.map((s) => (
+//               <span
+//                 key={s}
+//                 className="px-4 py-1.5 bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full text-sm font-medium hover:bg-indigo-100 transition"
+//               >
+//                 {s}
+//               </span>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* 🌐 Quick Links */}
+//       <section className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+//         <h3 className="text-xl font-semibold text-indigo-700">Quick Links</h3>
+//         <p className="text-slate-600 mt-1 mb-4">
+//           Connect with me or explore my online work:
+//         </p>
+//         <div className="flex gap-4 flex-wrap">
+//           <a
+//             className="px-4 py-2 border rounded-lg text-indigo-700 font-medium hover:bg-indigo-50 transition"
+//             href="https://github.com/MohamedWo"
+//             target="_blank"
+//             rel="noreferrer"
+//           >
+//             GitHub
+//           </a>
+//           <a
+//             className="px-4 py-2 border rounded-lg text-indigo-700 font-medium hover:bg-indigo-50 transition"
+//             href="https://www.kaggle.com/"
+//             target="_blank"
+//             rel="noreferrer"
+//           >
+//             Kaggle
+//           </a>
+//           <a
+//             className="px-4 py-2 border rounded-lg text-indigo-700 font-medium hover:bg-indigo-50 transition"
+//             href="https://www.linkedin.com/in/mohamed-mohamed-230ba4364/"
+//             target="_blank"
+//             rel="noreferrer"
+//           >
+//             LinkedIn
+//           </a>
+//           <Link
+//             href="/contact"
+//             className="px-4 py-2 border rounded-lg text-indigo-700 font-medium hover:bg-indigo-50 transition"
+//           >
+//             Contact
+//           </Link>
+//         </div>
+//         <Certificates />
+
+//       </section>
+//     </section>
+//   )
+// }
+
+// // npm run dev
+
+
+import Link from "next/link";
+import Certificates from "../components/Certificates";
 
 export default function Home() {
   const skills = [
-    'Python',
-    'PyTorch',
-    'Computer Vision',
-    'NLP',
-    'Streamlit',
-    'Scikit-learn',
-    'Data Visualization',
-    'Machine Learning',
-    'Deep Learning',
-  ]
+    "Python",
+    "PyTorch",
+    "Computer Vision",
+    "NLP",
+    "Streamlit",
+    "Scikit-learn",
+    "Data Visualization",
+    "Machine Learning",
+    "Deep Learning",
+  ];
+
+  const links = [
+    {
+      name: "GitHub",
+      url: "https://github.com/AIEngineerMoh",
+      icon: "💻",
+    },
+    {
+      name: "Email",
+      url: "mailto:m18308840@gmail.com",
+      icon: "📧",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com",
+      icon: "🔗",
+    },
+    {
+      name: "Kaggle",
+      url: "https://www.kaggle.com/",
+      icon: "📊",
+    },
+  ];
 
   return (
-    <section className="space-y-10">
-      {/* 🧠 Header */}
-      <header className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-10 rounded-3xl shadow-lg transform transition duration-500 hover:scale-[1.01]">
-        <h1 className="text-4xl font-bold tracking-tight">Mohamed Tarek</h1>
-        <p className="text-lg text-indigo-100 mt-3 max-w-2xl">
-          AI Student · Machine Learning & Deep Learning Enthusiast · Cairo, Egypt
+    <main className="max-w-6xl mx-auto px-6 py-12 space-y-14">
+
+      {/* HERO */}
+      <header className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl p-12">
+
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_white,_transparent_60%)]"></div>
+
+        <h1 className="text-5xl font-extrabold">
+          Mohamed Tarek
+        </h1>
+
+        <p className="mt-4 text-lg text-white/90 max-w-2xl">
+          AI Engineer · Machine Learning & Deep Learning Developer · Building intelligent systems from data to real-world impact.
         </p>
-        <div className="mt-6 flex gap-4 flex-wrap">
-          <a
-            className="px-6 py-2 bg-white text-indigo-700 font-semibold rounded-lg shadow hover:bg-indigo-50 transition"
+
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link
             href="/projects"
+            className="px-6 py-3 bg-white text-indigo-700 font-semibold rounded-xl hover:scale-105 transition"
           >
             🚀 View Projects
+          </Link>
+
+          <a
+            href="/files/Mohamed_Tarek_AI_Updated.docx"
+            className="px-6 py-3 border border-white rounded-xl hover:bg-white/10 transition"
+            target="_blank"
+          >
+            📄 View CV
           </a>
-
-          {/* 📄 CV Buttons */}
-          <div className="flex gap-3 flex-wrap">
-            <a
-              className="px-6 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition"
-              href="/files/Mohamed_Tarek_AI_Updated.docx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              🔍 View CV
-            </a>
-
-            <a
-              href="/files/Mohamed_Tarek_AI_Updated.docx"
-              download
-              className="px-6 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition"
-            >
-              📄 Download CV
-            </a>
-          </div>
         </div>
       </header>
 
-      {/* 👤 About Section */}
-      <section className="grid md:grid-cols-2 gap-8">
-        <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-          <h2 className="text-2xl font-semibold text-indigo-700">About Me</h2>
-          <p className="mt-4 text-slate-700 leading-relaxed">
-            I’m a passionate AI student at Arab Open University, currently in my
-            2nd year. I enjoy building intelligent systems using Machine Learning
-            and Deep Learning — transforming data into real-world insights.
+      {/* ABOUT + SKILLS */}
+      <section className="grid md:grid-cols-2 gap-10">
+
+        {/* ABOUT */}
+        <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition">
+          <h2 className="text-2xl font-bold text-indigo-700 mb-4">
+            About Me
+          </h2>
+
+          <p className="text-slate-700 leading-relaxed">
+            Passionate AI Engineer focused on Machine Learning, Deep Learning,
+            and building intelligent systems that solve real-world problems.
           </p>
-          <ul className="mt-4 space-y-2 text-sm text-slate-600">
-            <li>
-              <strong>Email:</strong>{' '}
-              <a
-                href="mailto:mohamedwork280@gmail.com"
-                className="text-indigo-600 hover:underline"
-              >
-                mohamedwork280@gmail.com
-              </a>
-            </li>
-            <li>
-              <strong>Location:</strong> Cairo, Egypt
-            </li>
-            <li>
-              <strong>GitHub:</strong>{' '}
-              <a
-                href="https://github.com/MohamedWo"
-                target="_blank"
-                rel="noreferrer"
-                className="text-indigo-600 hover:underline"
-              >
-                github.com/MohamedWo
-              </a>
-            </li>
-            <li>
-              <strong>LinkedIn:</strong>{' '}
-              <a
-                href="https://www.linkedin.com/in/mohamed-mohamed-230ba4364/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-indigo-600 hover:underline"
-              >
-                linkedin.com/in/mohamed-mohamed-230ba4364
-              </a>
-            </li>
-          </ul>
+
+          <div className="mt-6 space-y-2 text-sm text-slate-600">
+            <p>📍 Cairo, Egypt</p>
+            <p>🎓 AI Student</p>
+          </div>
         </div>
 
-        {/* 🧠 Skills */}
-        <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-          <h2 className="text-2xl font-semibold text-indigo-700">Skills</h2>
-          <p className="mt-3 text-slate-700">
-            Technologies and tools I use most often:
-          </p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            {skills.map((s) => (
+        {/* SKILLS */}
+        <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition">
+          <h2 className="text-2xl font-bold text-indigo-700 mb-4">
+            Skills
+          </h2>
+
+          <div className="flex flex-wrap gap-3">
+            {skills.map((skill) => (
               <span
-                key={s}
-                className="px-4 py-1.5 bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full text-sm font-medium hover:bg-indigo-100 transition"
+                key={skill}
+                className="px-4 py-2 bg-indigo-50 text-indigo-700 border border-indigo-100 rounded-full text-sm hover:bg-indigo-100 transition"
               >
-                {s}
+                {skill}
               </span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 🌐 Quick Links */}
-      <section className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 className="text-xl font-semibold text-indigo-700">Quick Links</h3>
-        <p className="text-slate-600 mt-1 mb-4">
-          Connect with me or explore my online work:
-        </p>
-        <div className="flex gap-4 flex-wrap">
-          <a
-            className="px-4 py-2 border rounded-lg text-indigo-700 font-medium hover:bg-indigo-50 transition"
-            href="https://github.com/MohamedWo"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            className="px-4 py-2 border rounded-lg text-indigo-700 font-medium hover:bg-indigo-50 transition"
-            href="https://www.kaggle.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Kaggle
-          </a>
-          <a
-            className="px-4 py-2 border rounded-lg text-indigo-700 font-medium hover:bg-indigo-50 transition"
-            href="https://www.linkedin.com/in/mohamed-mohamed-230ba4364/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
-          <Link
-            href="/contact"
-            className="px-4 py-2 border rounded-lg text-indigo-700 font-medium hover:bg-indigo-50 transition"
-          >
-            Contact
-          </Link>
+      {/* LINKS */}
+      <section className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition">
+        <h3 className="text-xl font-bold text-indigo-700 mb-6">
+          Connect With Me
+        </h3>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-5 py-3 border rounded-xl hover:bg-indigo-50 transition font-medium"
+            >
+              <span>{link.icon}</span>
+              {link.name}
+            </a>
+          ))}
         </div>
-        <Certificates />
 
+        <div className="mt-10">
+          <Certificates />
+        </div>
       </section>
-    </section>
-  )
+
+    </main>
+  );
 }
-
-// npm run dev
-
-
